@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecological Footprint Calculator</title>
+    <link rel="stylesheet" href="eco.css">
+</head>
+<body>
+    <h1>Sustainable Lifestyle</h1>
+    <div class="topnav">
+        <a href="navigation.html">Home</a>
+        <a class="active" href="carbon.html">Carbon Tracker</a>
+        <a href="ecological.html">Ecological Footprint</a>
+        <a href="tasks.html">Tasks</a>
+        <a href="badges.html">Badges</a>
+        <a href="about.html">About</a>
+        <a href="register.html">Register</a>
+        <a href="profile.html">Profile</a>
+    </div>
+    <header>
+        <h1>Ecological Footprint Calculator</h1>
+    </header>
+    <main>
+        <form id="footprintForm">
+            <section>
+                <h2>Food Consumption</h2>
+                <label for="animalProducts">How often do you eat animal-based products (meat, dairy, eggs)?</label>
+                <select id="animalProducts">
+                    <option value="0">Never</option>
+                    <option value="1">Rarely</option>
+                    <option value="2">Sometimes</option>
+                    <option value="3">Often</option>
+                    <option value="4">Always</option>
+                </select>
+                <label for="processedFood">How often do you eat processed, packaged, or imported food?</label>
+                <select id="processedFood">
+                    <option value="0">Never</option>
+                    <option value="1">Rarely</option>
+                    <option value="2">Sometimes</option>
+                    <option value="3">Often</option>
+                    <option value="4">Always</option>
+                </select>
+                <label for="organicFood">Do you prefer organic or locally grown food?</label>
+                <select id="organicFood">
+                    <option value="0">No</option>
+                    <option value="1">Sometimes</option>
+                    <option value="2">Always</option>
+                </select>
+            </section>
+            <section>
+                <h2>Housing</h2>
+                <label for="homeType">What type of home do you live in?</label>
+                <select id="homeType">
+                    <option value="apartment">Apartment</option>
+                    <option value="house">House</option>
+                </select>
+                <label for="householdSize">How many people live in your household?</label>
+                <input type="number" id="householdSize" min="1" max="20">
+                <label for="livingSpace">What is the size of your living space (in square meters)?</label>
+                <input type="number" id="livingSpace" min="10" max="1000">
+                <label for="energySource">What energy sources do you use for heating and electricity?</label>
+                <select id="energySource">
+                    <option value="0">Fossil Fuels</option>
+                    <option value="1">Mixed</option>
+                    <option value="2">Renewable</option>
+                </select>
+                <label for="energyEfficiency">How energy-efficient is your home?</label>
+                <select id="energyEfficiency">
+                    <option value="0">Not Efficient</option>
+                    <option value="1">Somewhat Efficient</option>
+                    <option value="2">Very Efficient</option>
+                </select>
+            </section>
+            <section>
+                <h2>Transportation</h2>
+                <label for="publicTransport">How often do you use public transportation?</label>
+                <select id="publicTransport">
+                    <option value="0">Never</option>
+                    <option value="1">Rarely</option>
+                    <option value="2">Sometimes</option>
+                    <option value="3">Often</option>
+                    <option value="4">Always</option>
+                </select>
+                <label for="carUsage">How often do you drive a car?</label>
+                <select id="carUsage">
+                    <option value="0">Never</option>
+                    <option value="1">Rarely</option>
+                    <option value="2">Sometimes</option>
+                    <option value="3">Often</option>
+                    <option value="4">Always</option>
+                </select>
+                <label for="flightUsage">How often do you fly?</label>
+                <select id="flightUsage">
+                    <option value="0">Never</option>
+                    <option value="1">Rarely</option>
+                    <option value="2">Sometimes</option>
+                    <option value="3">Often</option>
+                    <option value="4">Always</option>
+                </select>
+                <label for="vehicleType">What type of vehicle do you drive?</label>
+                <select id="vehicleType">
+                    <option value="0">Electric</option>
+                    <option value="1">Hybrid</option>
+                    <option value="2">Gasoline</option>
+                    <option value="3">Diesel</option>
+                </select>
+                <label for="milesDriven">How many miles do you drive per year?</label>
+                <input type="number" id="milesDriven" min="0" max="50000">
+            </section>
+            <section>
+                <h2>Goods and Services</h2>
+                <label for="goodsSpending">How much do you spend on goods such as clothing, electronics, and household items?</label>
+                <input type="number" id="goodsSpending" min="0" max="100000">
+                <label for="recycling">How often do you recycle or reuse items?</label>
+                <select id="recycling">
+                    <option value="0">Never</option>
+                    <option value="1">Rarely</option>
+                    <option value="2">Sometimes</option>
+                    <option value="3">Often</option>
+                    <option value="4">Always</option>
+                </select>
+                <label for="wasteGenerated">How much waste do you generate?</label>
+                <input type="number" id="wasteGenerated" min="0" max="1000">
+                <label for="wasteDisposal">How is your waste disposed of?</label>
+                <select id="wasteDisposal">
+                    <option value="0">Landfill</option>
+                    <option value="1">Recycling</option>
+                    <option value="2">Composting</option>
+                </select>
+            </section>
+            <button type="button" onclick="calculateFootprint()">Calculate Footprint</button>
+        </form>
+        <section id="results">
+            <h2>Your Ecological Footprint</h2>
+            <p id="footprintResult"></p>
+        </section>
+    </main>
+    <script src="eco.js"></script>
+</body>
+</html>
